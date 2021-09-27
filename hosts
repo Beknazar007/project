@@ -1,0 +1,13 @@
+[all:vars]
+ansible_sudo_pass=test
+
+[app]
+linuxX ansible_host=192.168.0.158
+
+[database]
+linux1 ansible_host=192.168.0.159
+linux2 ansible_host=192.168.0.160
+
+[staging_ALL:children]
+app
+database
